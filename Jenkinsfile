@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 dir('my-webapp') {
-                    sh 'mvn clean package'
+                    sh 'mvn clean install'
                 }
             }
         }
