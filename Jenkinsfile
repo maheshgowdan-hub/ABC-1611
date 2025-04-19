@@ -25,14 +25,25 @@ pipeline {
                     '''
                 }
             }
-        } */
+        } 
 
         stage('Deploy to Tomcat') {
             steps {
                 dir('my-webapp') {
                     sh 'cp target/my-webapp.war /home/luffy/apache-tomcat-9.0.104/webapps'
                 }
-            }
+            } */
+         stage('Deploy to Tomcat') {
+            steps {
+                script {
+                    deploy adapters: [
+                        tomcat9(
+                            url: 'http://20.42.19.182:8081/',
+                            credentialsId: '', 
+                            path: '/webapps',
+                            war: '**/*.war' )]
+                }
         }
     }
+}
 }
