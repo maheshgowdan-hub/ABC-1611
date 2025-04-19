@@ -38,7 +38,7 @@ pipeline {
                 script {
                     deploy adapters: [
                         tomcat9(
-                            url: 'http://20.42.19.182:8081/',
+                            url: 'http://20.42.19.182:8081//manager/text',
                             credentialsId: 'tomcat', 
                             path: '/webapps',
                             war: '**/*.war' )]
