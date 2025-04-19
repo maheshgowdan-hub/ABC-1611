@@ -10,7 +10,7 @@ pipeline {
             }
         }
 
-        stage('Push Artifact') {
+      /*  stage('Push Artifact') {
             steps {
                 dir('my-webapp') {
                     sh '''
@@ -25,7 +25,7 @@ pipeline {
                     '''
                 }
             }
-        }
+        } */
 
         stage('Deploy to Tomcat') {
             steps {
