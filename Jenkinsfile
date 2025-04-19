@@ -41,7 +41,7 @@ pipeline {
                             url: 'http://20.42.19.182:8081//manager/text',
                             credentialsId: 'tomcat', 
                             path: '/webapps',
-                            war: '**/*.war' )]
+                            war: 'target/my-webapp.war' )]
                 }
         }
     }
