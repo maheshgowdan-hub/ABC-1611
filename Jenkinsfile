@@ -39,7 +39,7 @@ pipeline {
                     deploy adapters: [
                         tomcat9(
                             url: 'http://20.42.19.182:8081/',
-                            credentialsId: '', 
+                            credentialsId: 'tomcat', 
                             path: '/webapps',
                             war: '**/*.war' )]
                 }
