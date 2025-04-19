@@ -25,8 +25,8 @@ pipeline {
         
         stage('Deploy to Tomcat') {
             steps {
-                sh 'cp target/my-webapp.war /path/to/tomcat/webapps/'
-                // Or use a deploy plugin/script appropriate for your environment
+                sh 'cp target/my-webapp.war /home/luffy/apache-tomcat-9.0.104/webapps'
+                
             }
         }
     }
